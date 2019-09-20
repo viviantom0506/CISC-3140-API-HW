@@ -1,12 +1,16 @@
 #import flask, urllib.request, json, andssl
-#import if needed, if not needed then waste
+#import if needed
 #Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy
 from flask import Flask, render_template
 import urllib.request
 #JSON (JavaScript Object Notation)
+#you need to import JSON
 import json
+
+#Make sure to import ssl
 #Transport Layer Security
 import ssl
+
 
 #ssl
 this_context = ssl.SSLContext()
@@ -15,16 +19,16 @@ this_context = ssl.SSLContext()
 #call service
 the_link_info = urllib.request.urlopen('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY', context=this_context)
 
-#have the object read and stored into string
+#have the object read and stored into the string
 reader = the_link_info.read()
 
-#have the string to be steup and decode json into python data structure
+#have the string setup and decode json into python data structure
 finished = json.loads(reader.decode('utf-8'))
 
-#Flask object, help determine root path
+#Flask object, helps determine the root path
 app = Flask(__name__)
 
-#create a reference for the image
+#creating a reference for the image
 image = finished['hdurl']
 
 #@app- directory route
