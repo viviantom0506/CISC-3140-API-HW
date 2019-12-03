@@ -39,4 +39,4 @@ def index():
 
 # Runs app only when we run this script directly, not if we import this somewhere else
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
