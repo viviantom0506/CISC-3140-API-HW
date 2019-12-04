@@ -3,5 +3,4 @@ sudo: required
 python: '3.7'
 script:
   - python Vivian__T_HW.py
-install:
-  - pip install Flask==1.1.1
+
