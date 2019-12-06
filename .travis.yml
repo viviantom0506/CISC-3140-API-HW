@@ -4,6 +4,3 @@ python: '3.7'
 script:
   - python Vivian__T_HW.py
   
-  deploy:
-app: CISC-3140-API-HW
-  repo: viviantom0506/CISC-3140-API-HW
